@@ -1,0 +1,11 @@
+package org.jbpm.ios_rules;
+
+//from row number: 1
+//Non-winning running IOs
+rule "Non-winning IOs"
+    dialect "mvel"
+    when
+         f1 : Io( wins <= 0 , status == "running" )
+     then
+         System.out.println("Hello world");
+end
